@@ -18,40 +18,14 @@
     <link rel="stylesheet" href="component.css" />
 
     <script>
-      var bulkLocales = {
-        'fr': {
-          'Message': 'Texto',
-          'Document': 'Doc'
-        }
-      };
-
-      var targetedLocales = {
-        'fr': {
-          'fileTypeFacet': {
-            'Image': 'img'
-          },
-          'CoveoDynamicFacet': {
-            'Image': 'png'
-          }
-        }
-      };
-
-      var globalLocales = {
-        'Relevance': 'Rapport',
-      }
-
       document.addEventListener('DOMContentLoaded', function () {
         CoveoLocalizationManager(LOCALES, ['DynamicFacet']);
-        //CoveoLocalizationManager(bulkLocales, ['DynamicFacet']);
-        //CoveoLocalizationManager(targetedLocales);
-        //CoveoLocalizationManager(globalLocales);
       })
     </script>
 
     <script>
         document.addEventListener('DOMContentLoaded', function () {    
-            Coveo.SearchEndpoint.configureSampleEndpointV2();
-            // Coveo.SearchEndpoint.configureCloudV2Endpoint(demoConfig.orgId, demoConfig.token, demoConfig.restUri);
+            Coveo.SearchEndpoint.configureCloudV2Endpoint(demoConfig.orgId, demoConfig.token, demoConfig.restUri);
             // Coveo.SearchEndpoint.endpoints['default'].options.queryStringArguments.viewAllContent = 'true';
             Coveo.init(document.getElementById('search'), {
                 Analytics: {
