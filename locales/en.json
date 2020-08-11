@@ -1,0 +1,8 @@
+{
+    "Message": "Text",
+    "Relevance": "Rel",
+    "City": "City",
+    "DynamicFacet": {
+        "Document": "Doc"
+    }
+}

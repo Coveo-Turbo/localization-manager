@@ -1,0 +1,24 @@
+{
+    "name": "@coveops/localization-manager",
+    "version": "1.0.0",
+    "description": "Encapsulates the setup required for customizing and adding additional entries to the localization dictionary",
+    "main": "dist/index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "build": "coveops build LocalizationManager --template vanilla",
+        "serve": "coveops serve",
+        "precompile": "npm run build"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "Apache-2.0",
+    "files": [
+        "dist"
+    ],
+    "dependencies": {
+        "coveo-search-ui": "^2.9373.8"
+    },
+    "devDependencies": {
+        "@coveops/cli": "file:coveops-cli-0.9.0.tgz"
+    }
+}
