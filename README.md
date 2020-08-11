@@ -4,6 +4,10 @@ Encapsulates the setup required for customizing and adding additional entries to
 
 Disclaimer: This component was built by the community at large and is not an official Coveo JSUI Component. Use this component at your own risk.
 
+## Prerequisites
+
+1. `@coveops/cli` version 0.10.0 or later must be installed to support localization with this component.
+
 ## Getting Started
 
 1. Install the component into your project.
@@ -68,7 +72,6 @@ If the component is being bundled amongst other components, it will be available
 
 Be sure to update the variables to have the relevant information.
 
-
 ## Options
 
 The following options can be configured:
@@ -81,6 +84,27 @@ The following options can be configured:
 | `options` | No | object | {} | An object with additional options to configure as detailed in the following entries |
 | `options.disableTargetting` | No | boolean | `false` | Tells the localization manager to only set the global translation dictionary and not to pass the definitions as `valueCaptions` to targeted components. A targeted component can be specified with the `components` option or by specifying the `target` option with the `create:translation` command. |
 
+## Managing Translations
+
+With this component installed, and `@coveops/cli` version 0.10.0 or newer, the following CLI commands can be used to add localization to your project:
+
+1. Add locales for the languages you will support. Adding another language later on will create placeholders from your default language. By default the CLI uses `en`.
+
+```bash
+npx @coveops/cli create:locales en fr
+```
+
+2. Add translations for terms you want to replace.
+
+```bash
+npx @coveops/cli create:translation City --en City --fr Ville
+```
+
+3. Override translation terms for a given component or element with a queryable id.
+
+```bash
+npx @coveops/cli create:translation City --en City --fr Ville --target DynamicFacet
+```
 
 ## Contribute
 
