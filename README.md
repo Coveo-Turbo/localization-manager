@@ -36,7 +36,15 @@ const LocalizationManager = require('@coveops/localization-manager');
 export * as LocalizationManager from '@coveops/localization-manager'
 ```
 
-4. Expose the custom locale file using a script tag.
+4. Or for quick testing, you can add the script from unpkg
+
+```html
+<script src="https://unpkg.com/@coveops/localization-manager@latest/dist/index.min.js"></script>
+```
+
+> Disclaimer: Unpkg should be used for testing but not for production.
+
+5. Expose the custom locale file using a script tag.
 
 This locale should correspond to the one you used with Coveo.
 
